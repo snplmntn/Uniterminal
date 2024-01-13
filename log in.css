@@ -2,6 +2,13 @@ body{
   background-image: url(log\ in\ sign\ up\ bg.jpg);
   font-family: Arial, Helvetica, sans-serif;
 }
+.title{
+    font-family: 'Hagrid Text Trial';
+    text-align: center;
+    padding-top: 1px;
+    font-size: 25px;
+    margin-top: 3px;
+  }
 .logo{
   margin-top: 50px;
   margin-left:100px ;
@@ -14,12 +21,6 @@ body{
   margin-top: 160px;
   background-color: white;
   border-radius: 20px;
-}
-h1{
-  text-align: center;
-  padding-top: 2px;
-  font-size: 30px;
-  margin-top: 5px;
 }
 form{
   width: 320px;

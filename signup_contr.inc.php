@@ -29,3 +29,5 @@ function emailChecker(Object $pdo, String $Email){
 function create_user(Object $pdo, String $Email, String $Pass){
    set_user($pdo, $Email, $Pass);
 }
+
+?>

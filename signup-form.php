@@ -14,25 +14,20 @@ require_once 'signup_view.inc.php';
   <title>Uniterminal</title>
 
 </head>
+<?php
+      check_signup_errors();
+      ?>
 <body>
   <div class="sign-up-form"> 
       <img class="logo" src="logo.jpg" alt="">
       <h1> Sign In </h1>
-      <form action="signup.inc.php" action="POST">
-        <label>Email</label>
-        <input type="email" class="input-email" name="Email" placeholder="Enter Email" required>
-        <label>Password</label>
-        <input type="password" class="input-password" name="Password" placeholder="Enter Password" required>
-
-        <label>Re-Type Password</label>
-        <input type="password" class="input-repassword" placeholder="Re-Type Password" required>
-
+      <form action="signup.inc.php" method="POST">
+       <?php
+       signup_inputs();
+       ?>
         <button class="button">SIGN UP</button>
       </form>
       
-      <?php
-      check_signup_errors();
-      ?>
 
       <p> By clicking the Sign Up button, you agree to our <br>
        <a href="#">Terms of Service </a> and <a href="#">Privacy Policy</a>

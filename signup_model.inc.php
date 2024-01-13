@@ -24,6 +24,6 @@ function set_user(Object $pdo, String $Email, String $Pass)
     $stmt->bindParam(":Email", $Email);
     $stmt->bindParam(":Pass", $hashedpass);
     $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $result;
 }
+
+?>

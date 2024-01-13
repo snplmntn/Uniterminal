@@ -1,11 +1,11 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $Email == $_POST["Email"];
-    $Pass == $_POST["Password"];
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $Email = $_POST["Email"];
+    $Pass = $_POST["Pass"];
     
     try{    
-        require_once "connection.php";
+        require_once "connection.inc.php";
         require_once "signup_model.inc.php";
         require_once "signup_contr.inc.php";
 
@@ -28,6 +28,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
         if($errors){
             $_SESSION["error_signup"] = $errors;
+
+            $signupData = [
+                "Email" => $Email
+            ]; 
+            $_SESSION["signup_data"] = $signupData;
+            
             header("Location: signup-form.php");
             die();
         }
@@ -45,3 +51,4 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     header("Location: signup-form.php");
     die();
 }
+?>

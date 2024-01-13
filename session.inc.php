@@ -5,7 +5,7 @@ ini_set('session.use_strict_mode', 1);
 
 session_set_cookie_params([
     'lifetime' => 1800,
-    'domain' => 'uniterminal.dosshs.online',
+    'domain' => 'localhost',
     'path' => '/',
     'secure' => true,
     'httponly' => true
@@ -26,3 +26,5 @@ if(!isset($_SESSION['last_regeneration'])){
         sessionRegeneration();
     }
 }
+
+?>
